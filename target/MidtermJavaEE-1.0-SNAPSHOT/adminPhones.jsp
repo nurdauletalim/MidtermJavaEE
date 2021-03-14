@@ -12,17 +12,17 @@
 </head>
 <body>
 <h1>Add New Phone</h1>
-<form action="SaveServlet" method="post">
+<form action="SavePhonesServlet" method="post">
     <table>
         <tr><td>Name:</td><td><input type="text" name="name"/></td></tr>
         <tr><td>Price:</td><td><input type="text" name="price"/></td></tr>
         <tr><td>img Link:</td><td><input type="text" name="imgLink"/></td></tr>
-        <tr><td colspan="2"><input type="submit" value="Save Employee"/></td></tr>
+        <tr><td colspan="2"><input type="submit" value="Save Phone"/></td></tr>
     </table>
 </form>
 
 <br/>
-<a href="ViewServlet">view phones</a>
-
+<a href="ViewPhonesServlet">View phones</a><br>
+<a href="adminUsers.jsp">Users</a>
 </body>
 </html>

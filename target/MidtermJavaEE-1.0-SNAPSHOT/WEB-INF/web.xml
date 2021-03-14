@@ -39,7 +39,6 @@
         <url-pattern>/servlet1</url-pattern>
     </filter-mapping>
 
-
     <welcome-file-list>
         <welcome-file>Main.jsp</welcome-file>
     </welcome-file-list>

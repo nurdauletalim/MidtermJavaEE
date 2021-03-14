@@ -39,18 +39,14 @@ public class PhoneServlet extends HttpServlet {
                 p.setName(rs.getString(2));
                 p.setPrice(rs.getString(3));
                 p.setImgLink(rs.getString(4));
+                getServletContext().getRequestDispatcher("/Phones.jsp").forward(request,response);
                 phonesList.add(p);
             }
             con.close();
         }catch(Exception e){e.printStackTrace();}
 
-        for (Phones p: phonesList){
-            request.setAttribute("name", p.name);
-            request.setAttribute("price",p.price);
-            request.setAttribute("imgLink",p.imgLink);
 
-            getServletContext().getRequestDispatcher("/Phones.jsp").forward(request,response);
         }
 
     }
-}
+

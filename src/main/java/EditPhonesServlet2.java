@@ -27,7 +27,7 @@ public class EditPhonesServlet2 extends HttpServlet {
 
         int status=PhonesDAO.update(e);
         if(status>0){
-            response.sendRedirect("ViewServlet");
+            response.sendRedirect("ViewPhonesServlet");
         }else{
             out.println("Sorry! unable to update record");
         }

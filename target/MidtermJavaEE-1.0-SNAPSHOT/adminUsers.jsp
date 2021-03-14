@@ -12,12 +12,13 @@
         <tr><td>Password:</td><td><input type="password" name="password"/></td></tr>
         <tr><td>Email:</td><td><input type="email" name="email"/></td></tr>
 
-        <tr><td colspan="2"><input type="submit" value="Save Employee"/></td></tr>
+        <tr><td colspan="2"><input type="submit" value="Save User"/></td></tr>
     </table>
 </form>
 
 <br/>
-<a href="ViewServlet">view employees</a>
+<a href="ViewServlet">View users</a><br>
+<a href="adminPhones.jsp">Phones</a>
 
 </body>
 </html>

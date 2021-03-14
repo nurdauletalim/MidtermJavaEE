@@ -16,9 +16,9 @@ public class AdminServlet extends HttpServlet {
 
         out.print("welcome ADMIN");
         out.print("<br><br>");
-        out.println("<a href='adminUsers.jsp'>Add New Employee</a>");
+        out.println("<a href='adminUsers.jsp'>Add New Users</a>");
         out.print("<br>");
-        out.print("<a href='adminPhones.jsp'>Phones</a>");
+        out.print("<a href='adminPhones.jsp'>Add New Phones</a>");
         out.close();
     }
 }  

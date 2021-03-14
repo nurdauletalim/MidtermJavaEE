@@ -24,8 +24,8 @@ public class SavePhonesServlet extends HttpServlet {
 
         int status=PhonesDAO.save(e);
         if(status>0){
-            out.print("<p>Record saved successfully!</p>");
-            request.getRequestDispatcher("index.html").include(request, response);
+            out.println("<p>Record saved successfully!</p><br>");
+            out.println("<a href=\"ViewPhonesServlet\">view phones</a>");
         }else{
             out.println("Sorry! unable to save record");
         }

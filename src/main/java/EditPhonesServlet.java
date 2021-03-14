@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("/EditServlet")
+@WebServlet("/EditPhonesServlet")
 public class EditPhonesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -18,7 +18,7 @@ public class EditPhonesServlet extends HttpServlet {
 
         Phones e=PhonesDAO.getPhoneById(id);
 
-        out.print("<form action='EditServlet2' method='post'>");
+        out.print("<form action='EditPhonesServlet2' method='post'>");
         out.print("<table>");
         out.print("<tr><td></td><td><input type='hidden' name='id' value='"+e.getId()+"'/></td></tr>");
         out.print("<tr><td>Name:</td><td><input type='text' name='name' value='"+e.getName()+"'/></td></tr>");
