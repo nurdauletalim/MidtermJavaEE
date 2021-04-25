@@ -35,6 +35,9 @@
                 <a class="nav-link" href="LogoutServlet">Log out</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="NewPost.jsp">New Post</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="ProfileServlet">
                                         <jsp:getProperty name="user" property="name"/>
                 </a>

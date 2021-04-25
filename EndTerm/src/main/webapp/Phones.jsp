@@ -46,7 +46,7 @@ s
                     <p class="card-text"><%= rs.getString("price")%> tg</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Buy</a>
+                    <a href="" class="btn btn-primary">Buy</a>
                 </div>
             </div>
         </div>

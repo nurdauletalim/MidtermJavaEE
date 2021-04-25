@@ -53,6 +53,28 @@ public class PostDAO {
         return posts;
     }
 
+    public boolean newPost(Post post) {
+        try {
+            Connection con = getConnection();
+            PreparedStatement ps = con.prepareStatement("INSERT INTO posts (topic, text, likes, dislikes, userid) " +
+                    "VALUES (?, ?, ?, ?, ?)");
+
+            ps.setString(1, post.getTopic());
+            ps.setString(2, post.getText());
+            ps.setInt(3, post.getLike());
+            ps.setInt(4, post.getDislike());
+            ps.setInt(5,post.getUserId());
+
+            ps.executeUpdate();
+            con.close();
+            return true;
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
     public Post getPostById(Integer id) throws SQLException, ClassNotFoundException {
         UserDAO userDao = new UserDAO();
         Connection con = getConnection();
@@ -90,36 +112,8 @@ public class PostDAO {
         return liked;
     }
 
-    public List<Comment> getComments()
-            throws SQLException, ClassNotFoundException {
-        List<Comment> comments = new ArrayList<>();
-        UserDAO userDao = new UserDAO();
 
-        Connection connection = getConnection();
 
-        PreparedStatement ps = connection.prepareStatement("SELECT * FROM comments");
-
-        ResultSet rs = ps.executeQuery();
-
-        while (rs.next()) {
-            Integer id = rs.getInt("id");
-            Integer postId = rs.getInt("postid");
-            Integer userId = rs.getInt("userid");
-            String comment = rs.getString("comment");
-
-            Users user = userDao.getUserById(userId);
-
-            Comment com = new Comment(id,postId,userId,comment,user);
-
-            comments.add(com);
-        }
-
-        rs.close();
-        ps.close();
-        connection.close();
-
-        return comments;
-    }
 
     public List<Comment> getAllByPostId(Integer pId) throws SQLException, ClassNotFoundException {
         List<Comment> comments = new ArrayList<>();
@@ -148,7 +142,7 @@ public class PostDAO {
         return comments;
     }
 
-    public int createComment(Comment comment) {
+    public int newComment(Comment comment) {
         int res = 0;
 
         try {

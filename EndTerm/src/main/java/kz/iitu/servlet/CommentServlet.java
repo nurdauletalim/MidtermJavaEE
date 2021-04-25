@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
 
 @WebServlet(name = "CommentServlet")
@@ -37,7 +36,7 @@ public class CommentServlet extends HttpServlet {
 
             int res = 0;
             if (com != null) {
-                res = postDao.createComment(comment);
+                res = postDao.newComment(comment);
             }
 
             Post post = postDao.getPostById(postId);
