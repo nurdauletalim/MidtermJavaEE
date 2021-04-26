@@ -27,7 +27,6 @@
 
 <br/>
 <a href="ViewPhonesServlet" class="btn btn-primary btn-lg btn-block">View phones</a><br><br>
-<a href="adminUsers.jsp" class="btn btn-secondary btn-lg btn-block">Users</a>
 </div>
 </body>
 </html>

@@ -50,6 +50,10 @@
                         <% out.print(postList.get(i).getText()); %>
                         <%--                        <%=rs.getString("text")%>--%>
                     </p>
+                    <p class="card-text">
+                       by <% out.print(postList.get(i).getUser().getName()); %>
+                        <%--                        <%=rs.getString("text")%>--%>
+                    </p>
                     <p class="card-text"><small class="text-muted"><i class="fa fa-thumbs-up" aria-hidden="true"></i>
                         <% out.print(postList.get(i).getLike()); %>
                         <%--                        <%=rs.getString("likes")%>--%>

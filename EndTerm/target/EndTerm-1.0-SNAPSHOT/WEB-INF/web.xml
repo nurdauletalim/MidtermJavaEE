@@ -37,7 +37,6 @@
         <servlet-name>CommentServlet</servlet-name>
         <url-pattern>/CommentServlet</url-pattern>
     </servlet-mapping>
-
     <servlet>
         <servlet-name>EditPostServlet</servlet-name>
         <servlet-class>kz.iitu.servlet.EditPostServlet</servlet-class>
